@@ -12,16 +12,19 @@ export default function Dashboard() {
   const handleVisualize = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/visualize", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/visualize",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({
+            year: year.toString(),
+          }),
         },
-        body: JSON.stringify({
-          year: year.toString(),
-        }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         alert(data.message);

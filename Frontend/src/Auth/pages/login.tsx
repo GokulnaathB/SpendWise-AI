@@ -16,17 +16,20 @@ export default function Login() {
   const handleSignUp = async () => {
     setIsSigningUp(true);
     try {
-      const response = await fetch("http://localhost:3000/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName,
+            email,
+            password,
+          }),
         },
-        body: JSON.stringify({
-          fullName,
-          email,
-          password,
-        }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         setIsSigningUp(false);
@@ -48,16 +51,19 @@ export default function Login() {
   const handleLogin = async () => {
     setIsLoggingIn(true);
     try {
-      const response = await fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
         },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+      );
 
       const data = await response.json();
       if (!response.ok) {

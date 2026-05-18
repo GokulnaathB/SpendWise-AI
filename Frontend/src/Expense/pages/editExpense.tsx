@@ -12,16 +12,19 @@ export default function EditExpense() {
     const fetchExpense = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:3000/fetchExpense", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + token,
+        const response = await fetch(
+          "https://spendwise-ai-2cho.onrender.com/fetchExpense",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + token,
+            },
+            body: JSON.stringify({
+              expenseId: expID,
+            }),
           },
-          body: JSON.stringify({
-            expenseId: expID,
-          }),
-        });
+        );
         const data = await response.json();
         if (!response.ok) {
           alert(data.message);
@@ -41,20 +44,23 @@ export default function EditExpense() {
   const handleUpdate = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/editExpense", {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/editExpense",
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({
+            expenseID: expID,
+            nameOfTheExpense,
+            category,
+            cost,
+            date,
+          }),
         },
-        body: JSON.stringify({
-          expenseID: expID,
-          nameOfTheExpense,
-          category,
-          cost,
-          date,
-        }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         alert(data.message);

@@ -30,17 +30,20 @@ export default function HowToSave() {
     setLoadingMonthly(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/analyzeMonthly", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/analyzeMonthly",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({
+            year,
+            month,
+          }),
         },
-        body: JSON.stringify({
-          year,
-          month,
-        }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         alert(data.message);
@@ -58,14 +61,17 @@ export default function HowToSave() {
     setLoadingYearly(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/analyzeYearly", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/analyzeYearly",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({ yearForYearly }),
         },
-        body: JSON.stringify({ yearForYearly }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         alert(data.message);

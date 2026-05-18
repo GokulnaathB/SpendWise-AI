@@ -14,19 +14,22 @@ export default function AddExpense() {
   const handleAdd = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/expenses/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/expenses/add",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({
+            nameOfTheExpense,
+            category,
+            cost,
+            date: selectedDate,
+          }),
         },
-        body: JSON.stringify({
-          nameOfTheExpense,
-          category,
-          cost,
-          date: selectedDate,
-        }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         alert(data.error);

@@ -37,18 +37,21 @@ export default function Budgeting() {
   const handleSetBudget = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/addBudget", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/addBudget",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({
+            year: year.toString(),
+            month: monthToNumMap.get(month),
+            budget,
+          }),
         },
-        body: JSON.stringify({
-          year: year.toString(),
-          month: monthToNumMap.get(month),
-          budget,
-        }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         alert(data.message);
@@ -63,18 +66,21 @@ export default function Budgeting() {
   const handleUpdateBudget = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/updateBudget", {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/updateBudget",
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({
+            year: year.toString(),
+            month: monthToNumMap.get(month),
+            budget,
+          }),
         },
-        body: JSON.stringify({
-          year: year.toString(),
-          month: monthToNumMap.get(month),
-          budget,
-        }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         alert(data.message);

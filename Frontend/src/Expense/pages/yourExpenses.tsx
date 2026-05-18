@@ -48,16 +48,19 @@ export default function YourExpenses() {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/deleteExpense", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+      const response = await fetch(
+        "https://spendwise-ai-2cho.onrender.com/deleteExpense",
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({
+            expID: IDToDelete,
+          }),
         },
-        body: JSON.stringify({
-          expID: IDToDelete,
-        }),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         alert(data.message);
@@ -89,7 +92,7 @@ export default function YourExpenses() {
       try {
         const token = localStorage.getItem("token");
         const response = await fetch(
-          `http://localhost:3000/expenses?date=${date}&search=${encodeURIComponent(debouncedSearch)}&page=${page}&limit=${3}`,
+          `https://spendwise-ai-2cho.onrender.com/expenses?date=${date}&search=${encodeURIComponent(debouncedSearch)}&page=${page}&limit=${3}`,
           {
             headers: {
               Authorization: "Bearer " + token,
@@ -114,17 +117,20 @@ export default function YourExpenses() {
     const fetchBudget = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:3000/getBudget", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + token,
+        const response = await fetch(
+          "https://spendwise-ai-2cho.onrender.com/getBudget",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + token,
+            },
+            body: JSON.stringify({
+              month,
+              year,
+            }),
           },
-          body: JSON.stringify({
-            month,
-            year,
-          }),
-        });
+        );
         const data = await response.json();
         if (!response.ok) {
           // alert(data.message);
@@ -149,17 +155,20 @@ export default function YourExpenses() {
     const fetchMonthlyTotal = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:3000/getTotal", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + token,
+        const response = await fetch(
+          "https://spendwise-ai-2cho.onrender.com/getTotal",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + token,
+            },
+            body: JSON.stringify({
+              month,
+              year,
+            }),
           },
-          body: JSON.stringify({
-            month,
-            year,
-          }),
-        });
+        );
         const data = await response.json();
         if (!response.ok) {
           alert(data.message);
