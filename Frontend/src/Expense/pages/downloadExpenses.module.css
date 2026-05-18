@@ -69,3 +69,7 @@ input:focus {
   outline: none;
   border-color: #2563eb;
 }
+
+.downloadPage select:first-of-type {
+  width: 300px;
+}
