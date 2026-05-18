@@ -1,0 +1,9 @@
+.hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

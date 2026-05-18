@@ -1,0 +1,31 @@
+.INRIcon {
+  background-color: #2563eb;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.appName {
+  font-weight: 400;
+}
+
+.logoutButton {
+  color: black;
+  background-color: rgb(226, 226, 243);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: large;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: rgb(219, 219, 244);
+}
+
+@media (max-width: 600px) {
+  .appName {
+    display: none;
+  }
+}

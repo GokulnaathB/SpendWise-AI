@@ -1,0 +1,228 @@
+.expenseItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f9fafb;
+}
+
+.expenseItem:hover {
+  border-color: #2563eb;
+}
+
+.categoryCost {
+  display: flex;
+  gap: 15px;
+}
+
+.name_CategoryCost {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tagAndCategory {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+}
+
+.editDeleteButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.editButton {
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 6px;
+}
+.editButton:hover {
+  cursor: pointer;
+  background-color: #134fd0;
+}
+
+.deleteButton {
+  color: white;
+  background-color: rgb(253, 56, 56);
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 6px;
+}
+.deleteButton:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+.addExpenseButton {
+  width: fit-content;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.addExpenseButton:hover {
+  background-color: #134fd0;
+}
+
+.pageNavigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.pageNavigation button {
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 6px;
+}
+
+.pageNavigation button:hover {
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+}
+
+.pageNavigation button:disabled:hover {
+  cursor: not-allowed;
+  background-color: gray;
+  color: white;
+}
+
+.budgetQuote {
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #edf2fd;
+}
+.budgetQuote:hover {
+  border-color: #2563eb;
+}
+
+.totalExpenses {
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #edf2fd;
+}
+.totalExpenses:hover {
+  border-color: #2563eb;
+}
+
+.exceededBudget {
+  color: white;
+  padding: 5px;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #f95e5e;
+}
+
+.setBudgetAdvice {
+  padding: 5px;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #a8f9d0;
+}
+
+.deleteOrCancelButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.deleteOrCancelButtons button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.deleteOrCancelButtons button:first-of-type {
+  color: white;
+  background-color: rgb(253, 56, 56);
+}
+.deleteOrCancelButtons button:first-of-type:hover {
+  background-color: red;
+}
+.deleteOrCancelButtons button:nth-child(2):hover {
+  background-color: gray;
+  color: white;
+}
+
+.expensesOnACertainDateText {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+
+  margin: 20px 0;
+}
+
+.expensesOnACertainDateText input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.expensesOnACertainDateText input:hover {
+  border-color: #2563eb;
+  background-color: white;
+}
+
+.expensesOnACertainDateText input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.searchBar {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #8f8f8f;
+  margin-bottom: 20px;
+}
+
+.searchBar:hover {
+  border-color: #2563eb;
+}
+
+.searchBar:focus {
+  outline: none;
+}
+
+.expenses {
+  width: fit-content;
+  margin: auto;
+}
+
+.listOfExpenses {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 480px) {
+  .expensesOnACertainDateText {
+    font-size: small;
+  }
+}

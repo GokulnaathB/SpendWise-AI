@@ -1,0 +1,29 @@
+.dashboard {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.dashboardForm {
+  display: flex;
+  gap: 5px;
+}
+
+.dashboardForm input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dashboardForm button {
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.dashboardForm button:hover {
+  background-color: #134fd0;
+}

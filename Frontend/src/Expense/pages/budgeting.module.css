@@ -1,0 +1,81 @@
+.budgetPage {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.budgetForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.budgetForm input {
+  background-color: #f9fafb;
+}
+.budgetForm select {
+  background-color: #f9fafb;
+}
+
+.budgetForm div input {
+  width: 100%;
+}
+.budgetForm div input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+.budgetForm div select {
+  width: 100%;
+}
+.budgetForm div select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.setBudgetAndUpdateBudget {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.setBudgetAndUpdateBudget button {
+  width: 50%;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.setBudgetAndUpdateBudget button:nth-child(1) {
+  color: white;
+  background-color: #2563eb;
+}
+.setBudgetAndUpdateBudget button:nth-child(1):hover {
+  background-color: #134fd0;
+}
+
+.setBudgetAndUpdateBudget button:nth-child(2) {
+  background-color: #201f1f;
+  color: white;
+}
+.setBudgetAndUpdateBudget button:nth-child(2):hover {
+  background-color: black;
+  color: white;
+}
+
+.cancelBudgeting {
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background-color: rgb(253, 56, 56);
+  cursor: pointer;
+}
+
+.cancelBudgeting:hover {
+  background-color: red;
+}

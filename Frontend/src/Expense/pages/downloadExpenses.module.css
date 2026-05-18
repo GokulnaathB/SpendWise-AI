@@ -1,0 +1,71 @@
+.downloadPage {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.expenseTable {
+  margin-top: 10px;
+}
+
+.expenseTable table {
+  border: 1px solid blue;
+  border-collapse: collapse;
+  margin: auto;
+}
+.expenseTable th {
+  border: 1px solid blue;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: center;
+}
+
+.expenseTable td {
+  border: 1px solid blue;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: center;
+}
+
+.totalPrint {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.downloadPage button {
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  padding: 7px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.downloadPage button:hover {
+  background-color: #134fd0;
+}
+
+.totalPrint button {
+  width: fit-content;
+  height: fit-content;
+}
+
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+}

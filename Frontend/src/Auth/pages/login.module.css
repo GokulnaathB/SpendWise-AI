@@ -1,0 +1,109 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+.h2 {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.text1 {
+  margin-top: 2px;
+}
+
+.authBox {
+  height: fit-content;
+  width: 300px;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.twoButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  padding: 5px;
+  width: 100%;
+  gap: 10px;
+  background-color: rgb(240, 236, 236);
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.lAndI {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.authButton {
+  width: 100%;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.authButton:hover {
+  background-color: #134fd0;
+}
+
+.INRIcon {
+  background-color: #2563eb;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.inactiveAuthButton {
+  width: 100%;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(245, 250, 254);
+}
+
+.input {
+  margin-top: 5px;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgb(239, 239, 249);
+}
+
+.spin {
+  margin-top: 5px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

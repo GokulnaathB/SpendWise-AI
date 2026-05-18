@@ -1,0 +1,81 @@
+.editForm {
+  width: 250px;
+  margin: auto;
+  margin-top: 25px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.editFormItself {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editFormItself div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.editFormItself div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.editFormItself div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.editFormItself div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.editFormItself input {
+  background-color: #f9fafb;
+}
+.editFormItself input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.editFormItself select {
+  background-color: #f9fafb;
+}
+.editFormItself select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.updateOrCancelButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.updateOrCancelButtons button {
+  width: 50%;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.updateOrCancelButtons button:nth-child(1) {
+  color: white;
+  background-color: #2563eb;
+}
+
+.updateOrCancelButtons button:nth-child(1):hover {
+  background-color: #134fd0;
+}
+
+.updateOrCancelButtons button:nth-child(2):hover {
+  background-color: gray;
+  color: white;
+}

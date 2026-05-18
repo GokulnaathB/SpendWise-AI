@@ -1,0 +1,56 @@
+.analyze {
+  width: fit-content;
+  margin: auto;
+}
+
+.analyze form {
+  display: flex;
+  gap: 10px;
+}
+.analyze form input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+.analyze form select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.analyze button {
+  border: none;
+  color: white;
+  background-color: #2563eb;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.analyze button:hover {
+  background-color: #134fd0;
+}
+
+.AIContent {
+  margin-top: 10px;
+  border: 1px solid #2563eb;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.AIContent p {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.spin {
+  margin-top: 5px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

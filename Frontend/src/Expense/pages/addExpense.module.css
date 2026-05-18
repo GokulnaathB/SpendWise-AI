@@ -1,0 +1,96 @@
+.title {
+  width: fit-content;
+  margin: auto;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.addExpense {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: auto;
+  margin-top: 20px;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.addExpense input {
+  background-color: #f9fafb;
+}
+.addExpense input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.addExpense select {
+  background-color: #f9fafb;
+}
+.addExpense select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.addExpense div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.addForm div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.addForm div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+input {
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid gainsboro;
+}
+
+select {
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid gainsboro;
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addOrCancel {
+  display: flex;
+  gap: 10px;
+}
+
+.addOrCancel button {
+  width: 50%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.addOrCancel button:first-of-type {
+  color: white;
+  background-color: #2563eb;
+}
+.addOrCancel button:first-of-type:hover {
+  color: white;
+  background-color: #134fd0;
+}
+
+.addOrCancel button:nth-child(2):hover {
+  background-color: gray;
+  color: white;
+}
