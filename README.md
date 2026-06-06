@@ -1,4 +1,4 @@
-Developed an AI-Powered expense tracker. I named it Spendwise-AI. You can use it: https://spend-wise-ai-sable.vercel.app/
+Developed an AI-Powered expense tracker. I named it SpendWise-AI. You can use it: https://spend-wise-ai-sable.vercel.app/
 - Made using MERN stack.
 - Deployed backend on Render and frontend on Vercel.
 - Implemented authentication using JWT.
