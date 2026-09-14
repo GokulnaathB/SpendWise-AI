@@ -8,7 +8,7 @@ export default function AddExpense() {
     new Date().toLocaleDateString("en-CA"),
   );
   const [nameOfTheExpense, setNameOfTheExpense] = useState("");
-  const [category, setCategory] = useState("food");
+  const [category, setCategory] = useState("education");
   const [cost, setCost] = useState("");
 
   const handleAdd = async () => {
