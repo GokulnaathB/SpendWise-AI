@@ -16,6 +16,7 @@ module.exports = (req, res, next) => {
         });
       }
       req.user = user;
+      // user is the payload given to jwt.sign() while token creation.
       next();
     });
   } catch (err) {

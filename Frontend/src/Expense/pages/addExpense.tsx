@@ -76,6 +76,7 @@ export default function AddExpense() {
               name="category"
               onChange={(e) => setCategory(e.target.value)}
             >
+              <option value="education">Education</option>
               <option value="food">Food</option>
               <option value="transport">Transport</option>
               <option value="groceries">Groceries</option>
@@ -83,6 +84,8 @@ export default function AddExpense() {
               <option value="entertainment">Entertainment</option>
               <option value="medical">Medical</option>
               <option value="shopping">Shopping</option>
+              <option value="house-exp">House-Exp</option>
+              <option value="others">Others</option>
             </select>
           </div>
           <div>
